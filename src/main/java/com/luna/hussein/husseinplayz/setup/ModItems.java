@@ -16,7 +16,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> INFINITY_CARD = Registration.ITEMS.register("infinity_card", InfinityCard::new);
     public static final RegistryObject<Item> DIMENSION_CARD = Registration.ITEMS.register("dimension_card", DimensionCard::new);
-    public static final RegistryObject<Item> TRUE_CARD = Registration.ITEMS.register("true_card", DimensionCard::new);
+    public static final RegistryObject<Item> TRUE_CARD = Registration.ITEMS.register("true_card", TrueCard::new);
     static void register() {
 
     }
