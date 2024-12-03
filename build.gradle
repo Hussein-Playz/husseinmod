@@ -26,7 +26,7 @@ if (env.GITHUB_RUN_NUMBER) {
 }
 
 java {
-    archivesBaseName = 'HusseinPlayzYT'
+    archivesBaseName = 'HusseinMod'
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -117,11 +117,11 @@ jar {
     manifest {
         attributes([
                 "Specification-Title"     : "hussein",
-                //"Specification-Vendor": "HusseinPlayzYT authors",
+                //"Specification-Vendor": "hussein authors",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                //"Implementation-Vendor": "HusseinPlayzYT authors",
+                //"Implementation-Vendor": "hussein authors",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
                 "MixinConfigs"            : "HusseinPlayzYT.mixins.json"
         ])
@@ -156,13 +156,13 @@ curseforge {
     }
     project {
         id = '559313'
-        changelog = 'A changelog can be found at https://github.com/Hussein-Playz/husseinmod'
+        changelog = 'A changelog can be found at https://github.com/Hexeption/AEInfinityBooster'
         releaseType = 'release'
         addGameVersion '1.20'
         addGameVersion '1.20.1'
 
         mainArtifact(jar) {
-            displayName = "HusseinPlayzYT v$version"
+            displayName = "AEInfinityBooster v$version"
         }
         relations {
             requiredDependency 'applied-energistics-2'
@@ -201,8 +201,8 @@ modrinth {
         token = env.MODRINTH_API_KEY
     }
     projectId = 'VQhDBNs8'
-    versionName = "HusseinPlayzYT v$version"
-    changelog = 'A changelog can be found at https://github.com/Hussein-Playz/husseinmod'
+    versionName = "AEInfinityBooster v$version"
+    changelog = 'A changelog can be found at https://github.com/Hexeption/AEInfinityBooster'
     versionNumber = "$version"
     uploadFile = jar
     gameVersions = ["1.20.1"]
