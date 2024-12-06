@@ -26,27 +26,3 @@ versionRange = "[15.0.9-beta,)"
 mandatory = true
 ordering = "AFTER"
 side = "BOTH"
-[[dependencies.hussein]]
-modId="curios"
-mandatory=true
-versionRange="[5.11.0,)"
-ordering="AFTER"
-side="BOTH"
-[[dependencies.hussein]]
-modId="codechickenlib"
-mandatory=true
-versionRange="4.4.0.516"
-ordering="AFTER"
-side="BOTH"
-[[dependencies.hussein]]
-modId="brandonscore"
-mandatory=true
-versionRange="[3.2.1.302,)"
-ordering="AFTER"
-side="BOTH"
-[[dependencies.hussein]]
-modId="draconicevolution"
-mandatory=true
-versionRange="[3.1.2.598,)"
-ordering="AFTER"
-side="BOTH"
