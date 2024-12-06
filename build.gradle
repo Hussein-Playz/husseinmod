@@ -33,7 +33,7 @@ println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getPro
 
 minecraft {
     mappings channel: 'official', version: '1.20.1'
-
+    accessTransformer = file("src/main/resources/access_transformer.cfg")
     runs {
         client {
             workingDirectory project.file('run/client')
@@ -103,17 +103,42 @@ repositories {
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
     }
+//    mavenLocal()
+    maven { url = "https://maven.covers1624.net/" }
+    maven { url = "https://dvs1.progwml6.com/files/maven" }
+    maven { url = "https://maven.cil.li/" }
+    maven { url = "https://maven.theillusivec4.top/" }
+    maven {
+        url = "https://maven.squiddev.cc/"
+        content { includeGroup("cc.tweaked") }
+    }
+    maven { url = "https://maven.blamejared.com/" }
+//    maven { url = "https://modmaven.dev/" }
+    maven { url = "https://maven.shadowsoffire.dev/releases"
+        content { includeGroup ("dev.shadowsoffire") }
+    }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.1.43'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.11'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.0.0.12")
     compileOnly fg.deobf("appeng:appliedenergistics2-forge:15.0.9-beta")
     runtimeOnly fg.deobf("appeng:appliedenergistics2-forge:15.0.9-beta")
+    implementation fg.deobf("com.brandon3055.brandonscore:BrandonsCore:${mc_version}-${bcore_version}:universal")
+    implementation fg.deobf("io.codechicken:CodeChickenLib:${mc_version}-${ccl_version}:universal")
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api"))
+    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}"))
+    implementation fg.deobf("com.brandon3055.draconicevolution:Draconic-Evolution:${mc_version}-${mod_version}:universal")
+
 }
 jar {
     manifest {
+        manifest {
+            attributes 'FMLAT': 'access_transformer.cfg'
+        }
         attributes([
                 "Specification-Title"     : "hussein",
                 //"Specification-Vendor": "hussein authors",

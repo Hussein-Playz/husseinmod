@@ -26,3 +26,21 @@ versionRange = "[15.0.9-beta,)"
 mandatory = true
 ordering = "AFTER"
 side = "BOTH"
+[[dependencies.hussein]]
+modId="codechickenlib"
+mandatory=true
+versionRange="${ccl_version}"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.hussein]]
+modId="brandonscore"
+mandatory=true
+versionRange="[${bcore_version},)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.hussein]]
+modId="draconicevolution"
+mandatory=true
+versionRange="[${mod_version},)"
+ordering="AFTER"
+side="BOTH"

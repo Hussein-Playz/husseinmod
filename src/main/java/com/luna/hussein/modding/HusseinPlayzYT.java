@@ -1,5 +1,25 @@
 package com.luna.hussein.modding;
 
+import com.brandon3055.draconicevolution.api.DraconicAPI;
+import com.brandon3055.draconicevolution.api.crafting.IngredientStack;
+import com.brandon3055.draconicevolution.client.ClientProxy;
+import com.brandon3055.draconicevolution.client.DEParticles;
+import com.brandon3055.draconicevolution.command.DECommands;
+import com.brandon3055.draconicevolution.handlers.DEEventHandler;
+import com.brandon3055.draconicevolution.handlers.DESounds;
+import com.brandon3055.draconicevolution.handlers.LootEventHandler;
+import com.brandon3055.draconicevolution.handlers.ModularArmorEventHandler;
+import com.brandon3055.draconicevolution.handlers.ModuleEventHandler;
+import com.brandon3055.draconicevolution.init.ClientInit;
+import com.brandon3055.draconicevolution.init.DEContent;
+import com.brandon3055.draconicevolution.init.DECreativeTabs;
+import com.brandon3055.draconicevolution.init.DEModules;
+import com.brandon3055.draconicevolution.init.DETags;
+import com.brandon3055.draconicevolution.init.ModCapabilities;
+import com.brandon3055.draconicevolution.integration.computers.ComputerCraftCompatEventHandler;
+import com.brandon3055.draconicevolution.integration.equipment.EquipmentManager;
+import com.brandon3055.draconicevolution.items.tools.Dislocator;
+import com.brandon3055.draconicevolution.network.DraconicNetwork;
 import appeng.api.ids.AECreativeTabIds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
