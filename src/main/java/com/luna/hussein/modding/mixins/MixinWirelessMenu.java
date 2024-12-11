@@ -10,12 +10,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import com.luna.hussein.modding.setup.ModItems;
 
-/**
- * MixinWirelessMenu
- *
- * @author Hexeption admin@hexeption.co.uk
- * @since 22/12/2021 - 10:35 am
- */
 @Mixin(value = WirelessAccessPointMenu.class)
 public abstract class MixinWirelessMenu {
 

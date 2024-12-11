@@ -6,29 +6,56 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
+import com.brandon3055.draconicevolution.api.modules.lib.ModuleContext;
+import java.util.Map;
+import net.minecraft.network.chat.Component;
+import com.brandon3055.draconicevolution.api.modules.data.AutoFeedData;
+import com.brandon3055.draconicevolution.api.modules.lib.ModuleContext;
+import com.brandon3055.draconicevolution.init.DEContent;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.nbt.CompoundTag;
 
 public class NiceFood extends Item {
     public NiceFood() {
         super(new Item.Properties()
+                .stacksTo(1) // Only one per stack
                 .food(new FoodProperties.Builder()
-                        .nutrition(20) // Half max hunger restored
-                        .saturationMod(6.4f) // Half max saturation restored
-                        .alwaysEat() // Allows eating even if not hungry
+                        .nutrition(10)
+                        .saturationMod(2.4f)
+                        .alwaysEat()
                         .build())
-                .stacksTo(1)); // Sets this item to be non-stackable
+        );
     }
 
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
-        // Check if the entity is a player
         if (entity instanceof Player player) {
-            // Restore hunger and saturation
-            player.getFoodData().eat(10, 3.4f); // Half max hunger and saturation restored
-
-            // Keep the item in inventory after eating
-            return stack;
+            for (ItemStack itemStack : player.getInventory().items) {
+                if (itemStack.hasTag() && itemStack.getTag().contains("food_storage")) {
+                    CompoundTag tag = itemStack.getOrCreateTag();
+                    double currentStorage = tag.getDouble("food_storage");
+                    double nutritionValue = 10;
+                    tag.putDouble("food_storage", currentStorage + nutritionValue);
+                    return stack;
+                }
+            }
         }
-
         return super.finishUsingItem(stack, level, entity);
     }
+
+    @Override
+    public boolean canBeDepleted() {
+        return false;
+    }
 }
+
+

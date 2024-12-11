@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "E": {
       "item": "hussein:dimension_card"
@@ -19,6 +18,5 @@
   ],
   "result": {
     "item": "hussein:true_card"
-  },
-  "show_notification": true
+  }
 }

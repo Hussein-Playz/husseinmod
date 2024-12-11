@@ -8,12 +8,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import com.luna.hussein.modding.setup.ModItems;
 
-/**
- * MixinRestrictedInputSlot
- *
- * @author Hexeption admin@hexeption.co.uk
- * @since 22/12/2021 - 10:10 am
- */
 @Mixin(value = RestrictedInputSlot.class)
 public class MixinRestrictedInputSlot {
 
