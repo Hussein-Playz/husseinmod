@@ -12,12 +12,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import com.luna.hussein.modding.setup.ModItems;
 
-/**
- * MixinWirelessTerminalMenuHost
- *
- * @author Hexeption admin@hexeption.co.uk
- * @since 22/12/2021 - 08:27 am
- */
 @Mixin(value = WirelessTerminalMenuHost.class, remap = false)
 public class MixinWirelessTerminalMenuHost extends ItemMenuHost {
 

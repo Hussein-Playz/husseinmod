@@ -6,11 +6,12 @@ import com.luna.hussein.modding.HusseinPlayzYT;
 
 public class TrueCard extends Item {
     public TrueCard() {
-        super(new Item.Properties().durability(0));
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override
-    public boolean isFoil(ItemStack p_41453_) {
+    public boolean isFoil(ItemStack stack) {
         return true;
     }
+
 }

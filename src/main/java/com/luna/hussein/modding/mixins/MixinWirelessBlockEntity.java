@@ -15,12 +15,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/**
- * MixinWirelessBlockEntity
- *
- * @author Hexeption admin@hexeption.co.uk
- * @since 22/12/2021 - 09:06 am
- */
 @Mixin(value = WirelessAccessPointBlockEntity.class, remap = false)
 public class MixinWirelessBlockEntity {
 
