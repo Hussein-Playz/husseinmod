@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.luna.hussein.modding.mixins",
+  "package": "uk.infy.luna.mcsmld.mixins",
   "compatibilityLevel": "JAVA_16",
   "refmap": "HusseinPlayzYT.refmap.json",
   "mixins": [
